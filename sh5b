@@ -1,0 +1,13 @@
+User=`getent passwd $1 | cut -f 5 -d :`
+
+Na2me=`echo $User | cut -f 1 -d ,`
+Office=`echo $User | cut -f 2 -d ,`
+Ofno=`echo $User | cut -f 3 -d ,`
+Home=`echo $User | cut -f 4 -d ,`
+
+echo "Name = $Na2me"
+echo "Office = $Office"
+echo "Of.No. = $Ofno"
+echo "Home.No. = $Home"
+
+echo Shell = `getent passwd $1 | cut -f 7 -d :`

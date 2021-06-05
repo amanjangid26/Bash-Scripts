@@ -1,0 +1,16 @@
+#sh1
+
+echo -e "\033[36mHello \033[31mto \033[32mthe \033[35mLinux\033[0m" 
+
+echo -e "username: \c"
+whoami
+
+echo -e "hostname: \c"
+hostname
+
+echo -e "Current Directory: \c"
+pwd
+
+echo -e "List of Contents:"
+ls -lh
+

@@ -1,0 +1,15 @@
+echo -e "Enter the word: \c"
+read word
+
+case $word in
+	[aeiou]*)	echo "Lower case vowel"
+	;;
+	[AEIOU]*)	echo "Upper case vowel"
+	;;
+	*[0-9])		echo "Ends with number"
+	;;
+	???)		echo "3 character"
+	;;
+	*)		echo "$word"
+	;;
+esac

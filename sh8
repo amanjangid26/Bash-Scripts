@@ -1,0 +1,21 @@
+echo -e "Enter a File Name: \c"
+read f
+
+if [ -r $f ]; then
+	less $f
+	echo -e "Do you wish to edit this file? (y/n): \c"
+	read ans
+	if [ -w $f -a $ans = y ]; then
+		vi $f
+	elif [ $ans != y ]; then
+		echo "As you wish"
+	else 
+		echo "No write Access"
+	fi
+elif [ -e $f ]; then
+	echo "Not have permission"
+else
+	echo "Invalid file name"
+	sleep 1
+	/prgs/sh8
+fi 

@@ -1,0 +1,25 @@
+echo "Auditing Initialize..."
+sleep 3
+
+echo "Step 1: Gathering Hardware Info..."
+dmesg > /prgs/h.info
+sleep 2
+
+echo "Step 2: Gathering Storage Info..."
+lsblk > /prgs/s.info
+sleep 2
+
+echo "Step 3: Gathering Network Info..."
+ip a > /prgs/n.info
+sleep 2
+
+echo "Step 4: Creating a Tar-Ball..."
+tar -zcf /prgs/`hostname`.tar.gz /prgs/h.info /prgs/s.info /prgs/n.info &> /dev/null
+sleep 5
+
+echo "Step 5: Removing all the Unnecessary Files..."
+rm -f /prgs/*.info
+sleep 2
+
+echo "Audit Complete..."
+

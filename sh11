@@ -1,0 +1,17 @@
+Uids=`getent passwd | cut -f 3 -d :`
+
+
+lc=0
+sc=0
+
+
+for i in $Uids
+	do 
+	if [ "$i" -ge 1000 ]; then
+	let lc+=1
+	elif [ "$i" -ne 0 ]; then
+	let sc+=1
+	fi
+	done
+
+echo "There are $lc local users & $sc system users"

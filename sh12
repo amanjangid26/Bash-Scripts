@@ -1,0 +1,21 @@
+User=`cat $1`
+
+echo "Department Code:
+Sales	> 100
+MKTG 	> 101
+Fin	> 102"
+
+echo -e "Enter a Valid Code: \c"
+read C
+
+for i in $User
+	do
+	UC=`echo $i | cut -c 1-3`
+	ID=`echo $UC$C`
+	useradd $ID
+	echo "abc@123" | passwd --stdin $ID > /dev/null
+	done
+
+echo "All users are created, verify using 'getent passwd' to check users are created"
+
+

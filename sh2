@@ -1,0 +1,22 @@
+#sh2
+
+clear 
+
+echo -e "\033[36mWelcome to the DevOps World\033[0m"
+
+echo -e "Enter your name: \c"
+read name
+
+echo -e "Enter your mobile no.: \c"
+read mobile
+
+echo -e "Enter your Email ID: \c"
+read email
+
+echo -e "Hello \033[31m$name\033[0m, welcome to our company"
+sleep 2
+
+echo "$name: $mobile: $email" >> /employee.list
+
+/prgs/sh2
+

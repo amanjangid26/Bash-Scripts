@@ -1,0 +1,10 @@
+User=`getent passwd $1 | cut -f 5 -d :`
+
+echo "Name = `echo $User | cut -f 1 -d ,`"
+echo "Office = `echo $User | cut -f 2 -d ,`"
+echo "Ofno. = `echo $User | cut -f 3 -d ,`"
+echo "Mobile = `echo $User | cut -f 4 -d ,`"
+
+
+
+

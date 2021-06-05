@@ -1,0 +1,15 @@
+a=""
+
+
+
+case $1 in
+
+	apple)	echo "mango"
+	;;
+	mango)	echo "apple"
+	;;
+	$a) 	echo "Usage: /prgs/sh9 apple|mango"
+	;;
+	*)  	echo "Invalid Input"
+	;;
+esac

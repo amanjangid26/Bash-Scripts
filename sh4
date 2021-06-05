@@ -1,0 +1,9 @@
+echo -e "Username = \c"
+read name
+
+. /prgs/sh4a
+. /prgs/sh4b
+
+
+echo "Hello $name, $institute is located in $ci12ty"
+greet

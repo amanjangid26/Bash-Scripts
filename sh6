@@ -1,0 +1,9 @@
+if [ -z $1 ]; then
+	echo "Usage: /prgs/sh6 apple|mango"
+elif [ $1 = apple ]; then
+	echo "mango"
+elif [ $1 = mango ]; then
+	echo "apple"
+else
+	echo "Invalid input by the user"
+fi

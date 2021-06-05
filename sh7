@@ -1,0 +1,17 @@
+if [ -z $1 ]; then
+	echo "Usage: /prgs/sh7 <username>"
+
+
+else
+
+U=`getent passwd "$1" | cut -f 3 -d :`
+	if [ -z "$U" ]; then
+		echo "User does not exist"
+	elif [ $U -ge 1000 ]; then
+		echo "Local User"
+	elif [ $U -eq 0 ]; then
+		echo "Super User"
+	else 
+		echo "System User"
+	fi
+fi
